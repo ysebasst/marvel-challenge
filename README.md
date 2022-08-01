@@ -1,27 +1,47 @@
-# MarvelChallenge
+# Marvel challenge
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.4.
+Este CHALLENGE consiste en desarrollar un SPA que permita encontrar:
 
-## Development server
+- Personajes de Marvel desde un buscador.
+- Ver el detalle de los cómics asociados a los personajes.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Para desarrollar te enviaremos una carpeta comprimida donde encontrarás todos los
+recursos que vas a utilizar para esta prueba. Para los diseños que no se encuentran
+especificados te lo dejamos a tu imaginación.
 
-## Code scaffolding
+El buscador de Personajes debe consumir el [MARVEL API REST](https://developer.marvel.com/), en este link puede
+registrarse como desarrollador y encontrar una documentación apropiada para consumir el
+API.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### El buscador:
 
-## Build
+- Sólo debe mostrar un máximo de 10 resultados a la vez, pero no limitado a solo 10
+  resultados.
+- Cuando se seleccione el personaje deseado se debe desplegar la lista de comics
+  asociados a él, de los cuales se debe:
+  - poder visualizar el detalle y también se debe poder guardar en mi lista de
+    comics favoritos.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Con respecto a la lista de cómics favoritos:
 
-## Running unit tests
+- No puede haber cómics repetidos en dicha lista.
+- Adicionalmente, se requiere un mecanismo para añadir tres cómics al azar ,
+  estos tres cómics tienen que ser seleccionados de los que se encuentran asociados
+  a la lista de Personajes.
+- Por último, la lista de cómics debe ser persistida en localStorage, para que no se
+  pierda en caso que el usuario cierre la SPA y se pueda visualizar cuando regrese a
+  ella.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Una vez haya terminado el código describa en un documento brevemente:
 
-## Running end-to-end tests
+1. Las capas de la aplicación (por ejemplo capa de persistencia, vista, de aplicación, etc) y
+   qué clases o objetos pertenecen a cual
+2. La responsabilidad de cada clase o objeto creada Recibirá puntos extra si:
+3. Usa git o SVN y la historia del programa muestra su progreso en el desarrollo, usando
+   commits con unidades de funcionalidad
+4. Usa pruebas unitarias y/o de validación (acceptance) que demuestran el buen
+   funcionamiento del programa
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Al completar el challenge, por favor enviarnos la url con la app funcional , el código que lo
+soluciona o el link al repositorio donde se encuentra el código, el documento con la breve
+descripción de su solución.
