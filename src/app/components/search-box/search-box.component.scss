@@ -1,0 +1,29 @@
+.form-search {
+  position: relative;
+  margin: 0 auto;
+  max-width: 37.8175rem;
+  input {
+    padding: 0 1rem;
+    width: 100%;
+    font-size: 1.25rem;
+    line-height: 3.125rem;
+    border: none;
+    border-radius: 0.25rem;
+    outline: none;
+  }
+
+  img {
+    position: absolute;
+    top: 50%;
+    right: 0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    transform: translateY(-50%);
+    pointer-events: none;
+    cursor: pointer;
+
+    &.hidden {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a class="brand" href="/"
+      ><img class="logo" src="/assets/images/marvel_logo.svg" alt="marvel logo"
+    /></a>
+    <div class="toggle" id="toggle" (click)="toggleMenu()">
+      <img src="/assets/icons/menu-regular-24.png" alt="menu icon" />
+    </div>
+    <ul class="nav-list" [ngClass]="{ show: showMenu }">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/" (click)="toggleMenu()">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/favorites" (click)="toggleMenu()"
+          >Favorites</a
+        >
+      </li>
+    </ul>
+    <app-search-box class="search-box"></app-search-box>
+  </div>
+</nav>

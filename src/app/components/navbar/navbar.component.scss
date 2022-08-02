@@ -1,0 +1,82 @@
+.navbar {
+  z-index: 10;
+  position: relative;
+  padding: 0.625rem 1.5rem;
+  color: #fff;
+  background-color: #2d2727;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem 1rem;
+
+    @media screen and (min-width: 45rem) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  .brand {
+    display: flex;
+  }
+
+  .logo {
+    height: 2.5rem;
+
+    @media screen and (min-width: 45rem) {
+      height: 3.75rem;
+    }
+  }
+
+  .search-box {
+    flex-grow: 1;
+    flex-basis: 100%;
+  }
+
+  .toggle {
+    @media screen and (min-width: 45rem) {
+      display: none;
+    }
+
+    img {
+      height: 2.5rem;
+    }
+  }
+
+  .nav-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 0 1.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 100%;
+    background-color: #2d2727;
+    border-top: 1px solid #ffffff40;
+    transform-origin: top;
+    transition: transform 0.2s ease-in-out;
+    transform: scale(1, 0);
+
+    @media screen and (min-width: 45rem) {
+      display: none;
+    }
+
+    &.show {
+      transform: scale(1, 1);
+    }
+  }
+
+  .nav-item {
+    list-style: none;
+  }
+
+  .nav-link {
+    display: flex;
+    padding: 0.5rem 0;
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: #fff;
+    border-bottom: 1px solid #ffffff40;
+  }
+}

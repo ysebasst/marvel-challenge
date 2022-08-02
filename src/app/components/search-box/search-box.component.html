@@ -1,0 +1,20 @@
+<form
+  class="form-search"
+  id="form-search"
+  [formGroup]="form"
+  (change)="onChange()"
+>
+  <input
+    type="search"
+    formControlName="search"
+    id="search"
+    placeholder="Search character..."
+    autocomplete="off"
+    (ngModelChange)="onChange()"
+  />
+  <img
+    [ngClass]="{ hidden: form.valid }"
+    src="/assets/icons/search.png"
+    alt="search icon"
+  />
+</form>

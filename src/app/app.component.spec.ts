@@ -4,9 +4,7 @@ import { AppComponent } from './app.component';
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [
-        AppComponent
-      ],
+      declarations: [AppComponent],
     }).compileComponents();
   });
 
@@ -22,10 +20,11 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('marvel-challenge');
   });
 
-  it('should render title', () => {
+  it(`should appear the component 'router-outlet'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('marvel-challenge app is running!');
+    const app = fixture.componentInstance;
+    const routerOutlet =
+      fixture.debugElement.nativeElement.querySelector('router-outlet');
+    expect(routerOutlet).toBeTruthy();
   });
 });
