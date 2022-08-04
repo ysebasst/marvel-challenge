@@ -1,0 +1,93 @@
+.modal-comic {
+  z-index: 100;
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  width: 100%;
+  height: 100vh;
+  background-color: #000000c0;
+  transform: scale(0);
+
+  &.show {
+    transform: scale(1);
+  }
+
+  .content {
+    max-width: 50.8125rem;
+    background-color: #fff;
+
+    .wrapper {
+      position: relative;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1.875rem;
+      padding: 3.125rem 1.875rem 1.375rem;
+    }
+
+    .button-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      cursor: pointer;
+    }
+
+    .image {
+      width: 16.5rem;
+    }
+
+    .title {
+      margin: 0 0 1rem 0;
+    }
+
+    .description {
+      line-height: 1.5;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.25rem;
+        font-size: 1.25rem;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        user-select: none;
+        transition: background-color 0.2s;
+
+        &.btn-add-favorite {
+          background-color: #f0f0f0;
+          color: #3d3333;
+
+          &.favorite {
+            background-color: #322827;
+            color: #ed1d24;
+          }
+        }
+
+        &.btn-add-cart {
+          background-color: #dcdcdc;
+          color: #ed1d24;
+        }
+
+        img {
+          border-radius: 100%;
+        }
+
+        &:hover {
+          background-color: #777 !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+<div class="modal-comic" [ngClass]="{ show: showModal }">
+  <div class="content">
+    <div class="wrapper">
+      <img
+        class="button-close"
+        src="/assets/icons/btn-close.png"
+        alt="button close icon"
+        (click)="closeModal()"
+      />
+      <img
+        class="image"
+        [src]="comic?.thumbnail?.path + '.' + comic?.thumbnail?.extension"
+        [alt]="comic?.title"
+      />
+      <div class="info">
+        <h1 class="title">{{ comic?.title }}</h1>
+        <p
+          class="description"
+          [innerHTML]="comic?.description || 'No description found'"
+        ></p>
+      </div>
+    </div>
+    <div class="buttons">
+      <button
+        class="btn-add-favorite"
+        [ngClass]="{ favorite: onFavorites(comic?.id) }"
+        (click)="addFavorite(comic)"
+      >
+        <img
+          *ngIf="!onFavorites(comic?.id)"
+          class="default"
+          src="/assets/icons/btn-favourites-default.png"
+          alt="favorite icon"
+        />
+        <img
+          *ngIf="onFavorites(comic?.id)"
+          class="primary"
+          src="/assets/icons/btn-favourites-primary.png"
+          alt="favorite icon"
+        />{{
+          onFavorites(comic?.id) ? "ADDED TO FAVOURITES" : "ADD TO FAVOURITES"
+        }}
+      </button>
+      <button class="btn-add-cart">
+        <img src="/assets/icons/shopping-cart-primary.png" alt="cart icon" />BUY
+        <!-- FOR ${{ comic?.prices[1]?.price || 0 }} -->
+        FOR $3.99
+      </button>
+    </div>
+  </div>
+</div>
