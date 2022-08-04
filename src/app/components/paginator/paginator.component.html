@@ -1,0 +1,14 @@
+<div class="paginator">
+  <div class="button-list">
+    <div class="button-page">&lt;</div>
+    <div
+      class="button-page"
+      [ngClass]="{ active: page === pageIndex }"
+      *ngFor="let i of counter(pages) | slice: 0:5; let pageIndex = index"
+      (click)="goToPage(pageIndex)"
+    >
+      {{ pageIndex + 1 }}
+    </div>
+    <div class="button-page">&gt;</div>
+  </div>
+</div>
