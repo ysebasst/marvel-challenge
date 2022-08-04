@@ -1,1 +1,56 @@
-<p>home works!</p>
+<main class="home container">
+  <div class="character">
+    <h2 class="character__title">
+      <img src="/assets/icons/characters.png" alt="characters icon" />
+      <span>Characters</span>
+      <button class="button" (click)="addThreeComicsToFavorites()">
+        ADD 3 COMICS TO FAVORITES
+      </button>
+    </h2>
+    <div class="character-list" *ngIf="characters$ | async as characters">
+      <div class="character-card" *ngFor="let character of characters">
+        <img
+          class="image"
+          [src]="character.thumbnail.path + '.jpg'"
+          [alt]="character.name"
+        />
+        <div class="info">
+          <h3 class="title">{{ character.name }}</h3>
+          <p
+            class="description"
+            [innerHTML]="character.description || 'No description found'"
+          ></p>
+          <button
+            *ngFor="let comic of character?.comics?.items | slice: 0:1"
+            class="button"
+            (click)="getComic(comic.resourceURI)"
+          >
+            VIEW MORE
+          </button>
+        </div>
+        <div class="related-comics-container">
+          <h4>Related comics</h4>
+          <ul
+            class="relaited-comics-list"
+            *ngIf="character.comics.items.length > 0; else elseBlock"
+          >
+            <li
+              *ngFor="let comic of character?.comics?.items | slice: 0:4"
+              (click)="getComic(comic.resourceURI)"
+            >
+              {{ comic.name }}
+            </li>
+          </ul>
+          <ng-template #elseBlock
+            ><ul class="relaited-comics-list">
+              <h5>No comics found</h5>
+            </ul></ng-template
+          >
+        </div>
+      </div>
+    </div>
+    <app-paginator></app-paginator>
+  </div>
+  <app-favorites></app-favorites>
+  <app-modal-comic></app-modal-comic>
+</main>

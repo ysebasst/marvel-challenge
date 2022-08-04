@@ -8,6 +8,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { FavoritesComponent } from './components/favorites/favorites.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SearchBoxComponent } from './components/search-box/search-box.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ModalComicComponent } from './components/modal-comic/modal-comic.component';
+import { PaginatorComponent } from './components/paginator/paginator.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -25,8 +28,15 @@ const routes: Routes = [
     FavoritesComponent,
     NavbarComponent,
     SearchBoxComponent,
+    ModalComicComponent,
+    PaginatorComponent,
   ],
-  imports: [RouterModule.forRoot(routes), BrowserModule, ReactiveFormsModule],
+  imports: [
+    RouterModule.forRoot(routes),
+    BrowserModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
