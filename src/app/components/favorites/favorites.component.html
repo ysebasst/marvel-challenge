@@ -1,1 +1,25 @@
-<p>favorites works!</p>
+<div class="favorites">
+  <h2 class="favorites__title">
+    <img src="/assets/icons/favourites.png" alt="favorites icon" />My Favorites
+  </h2>
+  <div class="favorite-list">
+    <div
+      class="favorite-card"
+      *ngFor="let favorite of favorites"
+      (click)="getComic(favorite?.id)"
+    >
+      <img
+        src="/assets/icons/btn-delete.png"
+        alt="trash icon"
+        class="favorite-card__delete"
+        (click)="deleteFavorite(favorite?.id)"
+      />
+      <img
+        class="favorite-card__image"
+        [src]="favorite?.thumbnail?.path + '.' + favorite?.thumbnail?.extension"
+        [alt]="favorite?.title"
+      />
+      <h3 class="favorite-card__title">{{ favorite?.title }}</h3>
+    </div>
+  </div>
+</div>
