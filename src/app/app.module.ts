@@ -11,6 +11,7 @@ import { SearchBoxComponent } from './components/search-box/search-box.component
 import { HttpClientModule } from '@angular/common/http';
 import { ModalComicComponent } from './components/modal-comic/modal-comic.component';
 import { PaginatorComponent } from './components/paginator/paginator.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -30,6 +31,7 @@ const routes: Routes = [
     SearchBoxComponent,
     ModalComicComponent,
     PaginatorComponent,
+    FooterComponent,
   ],
   imports: [
     RouterModule.forRoot(routes),
