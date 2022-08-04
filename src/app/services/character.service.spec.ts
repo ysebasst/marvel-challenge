@@ -1,4 +1,3 @@
-import { of } from 'rxjs';
 import { CharacterService } from './character.service';
 
 describe('CharacterService', () => {
@@ -12,14 +11,5 @@ describe('CharacterService', () => {
 
   it('should be created', () => {
     expect(service).toBeTruthy();
-  });
-
-  it('should get characters of the API', (done: DoneFn) => {
-    httpClientSpy.get.and.returnValue(of({}));
-    service.get();
-    service.data$.subscribe((result) => {
-      expect(result).toEqual({});
-      done();
-    });
   });
 });
