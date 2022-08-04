@@ -1,5 +1,7 @@
 # Marvel challenge
 
+![Marvel Challenge](https://repository-images.githubusercontent.com/520288136/8454c9a7-e002-4b28-9fcf-29a0da52314a)
+
 Este CHALLENGE consiste en desarrollar un SPA que permita encontrar:
 
 - Personajes de Marvel desde un buscador.
@@ -37,10 +39,10 @@ Una vez haya terminado el código describa en un documento brevemente:
 1. Las capas de la aplicación (por ejemplo capa de persistencia, vista, de aplicación, etc) y
    qué clases o objetos pertenecen a cual
 2. La responsabilidad de cada clase o objeto creada Recibirá puntos extra si:
-3. Usa git o SVN y la historia del programa muestra su progreso en el desarrollo, usando
-   commits con unidades de funcionalidad
-4. Usa pruebas unitarias y/o de validación (acceptance) que demuestran el buen
-   funcionamiento del programa
+   1. Usa git o SVN y la historia del programa muestra su progreso en el desarrollo, usando
+      commits con unidades de funcionalidad
+   2. Usa pruebas unitarias y/o de validación (acceptance) que demuestran el buen
+      funcionamiento del programa
 
 Al completar el challenge, por favor enviarnos la url con la app funcional , el código que lo
 soluciona o el link al repositorio donde se encuentra el código, el documento con la breve
